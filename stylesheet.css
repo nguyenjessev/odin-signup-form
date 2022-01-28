@@ -3,10 +3,18 @@
   src: url(./Norse-Bold.otf);
 }
 
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 body {
   display: flex;
   margin: 0;
   height: 100vh;
+  font-family: "system";
 }
 
 .container-left {
@@ -16,7 +24,8 @@ body {
   color: white;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  flex: 2;
+  min-width: 300px;
 }
 
 .banner {
@@ -35,4 +44,72 @@ body {
 
 .bg-footer a:link, .bg-footer a:visited {
   color: white;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 3;
+  background: hsl(0, 0%, 96%);
+}
+
+.form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  background: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 70%);
+}
+
+.form-fields p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.description {
+  font-weight: bold;
+  padding: 16px;
+}
+
+.signup-form {
+  width: 100%;
+}
+
+.signup-form p {
+  font-weight: bold;
+}
+
+label {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.button-group {
+  margin-left: 16px;
+}
+
+button {
+  margin-bottom: 16px;
+  color: white;
+  background: hsl(90, 50%, 30%);
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px grey;
+  transition: all .2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+button:active {
+  transition: none;
+  transform: scale(0.95);
+  background: hsl(90, 50%, 20%);
 }

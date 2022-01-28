@@ -70,6 +70,14 @@ body {
   margin: 0;
 }
 
+.form-group {
+  min-width: 40%;
+}
+
+.form-group input {
+  width: 100%;
+}
+
 .description {
   font-weight: bold;
   padding: 16px;

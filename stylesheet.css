@@ -5,4 +5,6 @@ body {
 .container-left {
   display: flex;
   flex-direction: column;
+  background: center/cover url("bg.jpg");
+  color: white;
 }
